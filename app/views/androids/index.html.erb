@@ -2,19 +2,20 @@
 
 <table>
   <tr>
-    <th>Carrier</th>
-    <th>Maker</th>
-    <th>Petname</th>
-    <th>Modelname</th>
-    <th>Os ver start</th>
-    <th>Os ver current</th>
-    <th>Screen inch</th>
-    <th>Screen x</th>
-    <th>Screen y</th>
-    <th>Screen dpi</th>
-    <th>Screen type</th>
-    <th>Keyboard</th>
-    <th>Release date</th>
+    <th>통신사</th>
+    <th>제조사</th>
+    <th>펫네임</th>
+    <th>모델명</th>
+    <th>버전(출시)</th>
+    <th>버전(현재)</th>
+    <th>인치</th>
+    <th>해상도</th>
+    <th>대각px</th>
+    <th>PPI</th>
+    <th>OS DPI</th>
+    <th>화면 종류</th>
+    <th>키보드</th>
+    <th>출시년</th>
     <th></th>
     <th></th>
     <th></th>
@@ -29,12 +30,13 @@
     <td><%= android.os_ver_start %></td>
     <td><%= android.os_ver_current %></td>
     <td><%= android.screen_inch %></td>
-    <td><%= android.screen_x %></td>
-    <td><%= android.screen_y %></td>
+    <td><%= android.screen_x %>x<%= android.screen_y %></td>
+    <td><%= Math.sqrt(android.screen_x**2 + android.screen_y**2).to_i %></td>
+    <td><%= (Math.sqrt(android.screen_x**2 + android.screen_y**2)/android.screen_inch).to_i %></td>
     <td><%= android.screen_dpi %></td>
     <td><%= android.screen_type %></td>
     <td><%= android.keyboard %></td>
-    <td><%= android.release_date %></td>
+    <td><%= android.release_date.strftime("%Y") %></td>
     <td><%= link_to 'Show', android %></td>
     <td><%= link_to 'Edit', edit_android_path(android) %></td>
     <td><%= link_to 'Destroy', android, method: :delete, data: { confirm: 'Are you sure?' } %></td>
