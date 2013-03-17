@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  carrier: MyString
+  maker: MyString
+  petname: MyString
+  modelname: MyString
+  os_ver_start: 1.5
+  os_ver_current: 1.5
+  screen_inch: 1.5
+  screen_x: 1
+  screen_y: 1
+  screen_dpi: MyString
+  screen_type: MyString
+  keyboard: false
+  release_date: 2013-03-17 21:12:43
+
+two:
+  carrier: MyString
+  maker: MyString
+  petname: MyString
+  modelname: MyString
+  os_ver_start: 1.5
+  os_ver_current: 1.5
+  screen_inch: 1.5
+  screen_x: 1
+  screen_y: 1
+  screen_dpi: MyString
+  screen_type: MyString
+  keyboard: false
+  release_date: 2013-03-17 21:12:43

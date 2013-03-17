@@ -1,0 +1,47 @@
+<h1>Listing androids</h1>
+
+<table>
+  <tr>
+    <th>Carrier</th>
+    <th>Maker</th>
+    <th>Petname</th>
+    <th>Modelname</th>
+    <th>Os ver start</th>
+    <th>Os ver current</th>
+    <th>Screen inch</th>
+    <th>Screen x</th>
+    <th>Screen y</th>
+    <th>Screen dpi</th>
+    <th>Screen type</th>
+    <th>Keyboard</th>
+    <th>Release date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @androids.each do |android| %>
+  <tr>
+    <td><%= android.carrier %></td>
+    <td><%= android.maker %></td>
+    <td><%= android.petname %></td>
+    <td><%= android.modelname %></td>
+    <td><%= android.os_ver_start %></td>
+    <td><%= android.os_ver_current %></td>
+    <td><%= android.screen_inch %></td>
+    <td><%= android.screen_x %></td>
+    <td><%= android.screen_y %></td>
+    <td><%= android.screen_dpi %></td>
+    <td><%= android.screen_type %></td>
+    <td><%= android.keyboard %></td>
+    <td><%= android.release_date %></td>
+    <td><%= link_to 'Show', android %></td>
+    <td><%= link_to 'Edit', edit_android_path(android) %></td>
+    <td><%= link_to 'Destroy', android, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Android', new_android_path %>

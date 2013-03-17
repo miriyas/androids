@@ -1,0 +1,69 @@
+<%= form_for(@android) do |f| %>
+  <% if @android.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@android.errors.count, "error") %> prohibited this android from being saved:</h2>
+
+      <ul>
+      <% @android.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :carrier %><br />
+    <%= f.text_field :carrier %>
+  </div>
+  <div class="field">
+    <%= f.label :maker %><br />
+    <%= f.text_field :maker %>
+  </div>
+  <div class="field">
+    <%= f.label :petname %><br />
+    <%= f.text_field :petname %>
+  </div>
+  <div class="field">
+    <%= f.label :modelname %><br />
+    <%= f.text_field :modelname %>
+  </div>
+  <div class="field">
+    <%= f.label :os_ver_start %><br />
+    <%= f.text_field :os_ver_start %>
+  </div>
+  <div class="field">
+    <%= f.label :os_ver_current %><br />
+    <%= f.text_field :os_ver_current %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_inch %><br />
+    <%= f.text_field :screen_inch %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_x %><br />
+    <%= f.number_field :screen_x %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_y %><br />
+    <%= f.number_field :screen_y %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_dpi %><br />
+    <%= f.text_field :screen_dpi %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_type %><br />
+    <%= f.text_field :screen_type %>
+  </div>
+  <div class="field">
+    <%= f.label :keyboard %><br />
+    <%= f.check_box :keyboard %>
+  </div>
+  <div class="field">
+    <%= f.label :release_date %><br />
+    <%= f.datetime_select :release_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
